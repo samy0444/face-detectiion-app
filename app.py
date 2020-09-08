@@ -11,10 +11,12 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 #def load_image(img):
 	#im= Image.open(img)
 	#return im
-
-face_cascade=cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
-eye_cascade=cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_eye.xml')
-smile_cascade= cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_smile.xml')
+try:
+	face_cascade=cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
+	eye_cascade=cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_eye.xml')
+	smile_cascade= cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_smile.xml')
+except Exception:
+	st.write("Error loading cascade classifiers")
 
 def detect_faces(our_image):
 	new_img = np.array(our_image.convert('RGB'))
