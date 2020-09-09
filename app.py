@@ -155,7 +155,9 @@ def main():
 
 
 	elif choice == 'About':
-		st.subheader("About Face Detection App")
+		st.subheader("Face Detection App detects faces, smiles and eyes also can provide various features for inserted picture, in prder to make changes in it.")
+		st.text("Here is my email ID")
+		st.success("samriddhi100mit@gmal.com")
 
 		
 
