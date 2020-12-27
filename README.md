@@ -1,2 +1,2 @@
 # face-detectiion-app
-My first app deployed on heroku.
+It detects faces, smiles and eyes along with  provide other options for image editing such as blurring, contrast, brightness etc. 
